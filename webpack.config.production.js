@@ -1,3 +1,4 @@
+var webpack = require('webpack')
 var path = require('path')
 
 var BUILD_DIR = path.resolve(__dirname + '/build')
@@ -10,12 +11,6 @@ var config = {
     filename: 'bundle.js',
     publicPath: '/'
   },
-  devtool: 'source-map',
-  devServer: {
-    inline: true,
-    contentBase: BUILD_DIR,
-    port: 3333
-  },
   module: {
     loaders: [
       {
@@ -24,7 +19,10 @@ var config = {
         loader: 'babel-loader'
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({minimize: true})
+  ]
 }
 
 module.exports = config
