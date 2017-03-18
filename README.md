@@ -6,13 +6,16 @@ This includes a simple webpack/babel transpiling pipeline with hot loading for d
 
 
 ## Usage
-1. To use in a new project, first create your repo, then:
+1. To use in a new project, create and clone your repo (ensuring `git remote origin master` is setup and you are tracking it), then:
 ```
 git remote add base https://github.com/robertsben/react-base.git
+git pull base master
 ```
-2. Run `npm init` and overwrite the applicable parts of `package.json`
+2. Run `npm init` and overwrite the applicable parts of `package.json` 
+    * _(note: `npm init` will pull the description from this `readme` into `package.json`)_
 3. Customise your skeleton html in `public/index.html`
 4. Start writing your app code in `src/index.jsx`
+5. Don't forget to overwrite this `readme`!
 
 
 ## Setup
