@@ -1,0 +1,24 @@
+{
+  "name": "react-base",
+  "version": "0.0.1",
+  "description": "A base for es6 react apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertsben/react-base.git"
+  },
+  "keywords": [
+    "es6",
+    "javascript",
+    "react"
+  ],
+  "author": "Ben Roberts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robertsben/react-base/issues"
+  },
+  "homepage": "https://github.com/robertsben/react-base#readme"
+}
