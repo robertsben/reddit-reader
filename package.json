@@ -1,1 +1,37 @@
-{  "name": "react-base",  "version": "0.0.1",  "description": "A base for es6 react apps",  "main": "index.js",  "scripts": {    "test": "echo \"Error: no test specified\" && exit 1",    "dev": "webpack-dev-server"  },  "repository": {    "type": "git",    "url": "git+https://github.com/robertsben/react-base.git"  },  "keywords": [    "es6",    "javascript",    "react"  ],  "author": "Ben Roberts",  "license": "MIT",  "bugs": {    "url": "https://github.com/robertsben/react-base/issues"  },  "homepage": "https://github.com/robertsben/react-base#readme",  "devDependencies": {    "webpack-dev-server": "^2.4.2"  },  "dependencies": {    "babel-preset-es2017": "^6.22.0",    "babel-preset-react": "^6.23.0",    "react": "^15.4.2",    "react-dom": "^15.4.2",    "webpack": "^2.2.1"  }}
+{
+  "name": "react-base",
+  "version": "0.0.1",
+  "description": "A base for es6 react apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertsben/react-base.git"
+  },
+  "keywords": [
+    "es6",
+    "javascript",
+    "react"
+  ],
+  "author": "Ben Roberts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robertsben/react-base/issues"
+  },
+  "homepage": "https://github.com/robertsben/react-base#readme",
+  "devDependencies": {
+    "webpack-dev-server": "^2.4.2"
+  },
+  "dependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2017": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "webpack": "^2.2.1"
+  }
+}

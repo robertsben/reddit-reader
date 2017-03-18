@@ -11,7 +11,7 @@ var config = {
     filename: 'bundle.js',
     publicPath: '/'
   },
-  devTool: 'source-map',
+  devtool: 'source-map',
   devServer: {
     inline: true,
     contentBase: BUILD_DIR,
@@ -22,14 +22,10 @@ var config = {
       {
         test: /\.jsx?/,
         include: APP_DIR,
-        loader: 'babel',
-        query: {
-          presets: [
-            'es2017',
-            'react'
-          ]
-        }
+        loader: 'babel-loader'
       }
     ]
   }
 }
+
+module.exports = config
