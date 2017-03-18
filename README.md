@@ -14,7 +14,14 @@ $ npm run dev
 
 For production, including bundle minifying:
 ```
+$ npm run build
 $ npm run start:prod
+```
+
+For production using docker:
+```
+$ docker build -t {your-app-name} .
+$ docker run -p 3000:3000 -d {your-app-name}
 ```
 
 ## Usage
