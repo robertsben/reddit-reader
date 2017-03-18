@@ -1,7 +1,6 @@
 {
   "name": "react-base",
   "version": "0.1.0",
-  "description": "A dockerised base for es2017 react apps",
   "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,21 +8,7 @@
     "build": "webpack --config webpack.config.production.js",
     "start:prod": "babel-node src/server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/robertsben/react-base.git"
-  },
-  "keywords": [
-    "es2017",
-    "javascript",
-    "react"
-  ],
-  "author": "Ben Roberts",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/robertsben/react-base/issues"
-  },
-  "homepage": "https://github.com/robertsben/react-base#readme",
   "devDependencies": {
     "webpack-dev-server": "^2.4.2"
   },
