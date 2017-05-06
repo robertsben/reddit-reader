@@ -9,6 +9,7 @@ const Post = (data) => (
       primaryText={data.title}
       secondaryText={<a href={data.url}>{data.url}</a>}
       leftAvatar={<Avatar src={data.thumbnail}/>}
+      onClick={() => {window.open('https://reddit.com' + data.permalink)}}
     />
     <Divider />
   </section>
