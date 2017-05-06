@@ -1,6 +1,5 @@
 import React from 'react'
 import PostContainer from '../containers/post.jsx'
-import { Divider } from 'material-ui/Divider'
 
 const Posts = ({children}) => (
   <div>

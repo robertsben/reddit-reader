@@ -1,48 +1,35 @@
-# react-base
+# reddit-reader
 ## Description
-A bare bones "Hello, world!" react app, to be used as a base repo for quick and easy setup of proper ES2017 react apps.
+A little react app to browse posts from reddit, written as a small learning exercise.
+Includes:
 
-This includes a simple webpack/babel transpiling pipeline with hot loading for dev, and a dockerised express server for prod.
-
-
-## Usage
-1. To use in a new project, create and clone your repo (ensuring `git remote origin master` is setup and you are tracking it), then:
-```
-git remote add base https://github.com/robertsben/react-base.git
-git pull base master
-```
-2. Run `npm init` and overwrite the applicable parts of `package.json` 
-    * _(note: `npm init` will pull the description from this `readme` into `package.json`)_
-3. Customise your skeleton html in `public/index.html`
-4. Start writing your app code in `src/index.jsx`
-5. Don't forget to overwrite this `readme`!
-
+* Use of ES-2017
+* Usage of react JS
+    * Organisation of react components, containers
+* Use of flux
+    * Use of `react-redux connect`
+    * Use of actions, reducers
+* Use of `fetch` api
+* 
 
 ## Setup
-Install the requirements
 ```
-$ npm install
-```
-
-For development, including hot-loading:
-```
-$ npm run dev
+git clone https://github.com/robertsben/reddit-reader.git
+cd reddit-reader
+npm install
 ```
 
-For production, including bundle minifying:
+## Usage
+1a. To run in docker (recommended):
 ```
-$ npm run build
-$ npm run start:prod
-```
-
-For production using docker:
-```
-$ docker build -t {your-app-name} .
-$ docker run -p 3000:3000 -d {your-app-name}
+$ docker build -t reddit-reader .
+$ docker run -p 3000:3000 -d reddit-reader
 ```
 
-## FAQ
-To update from base:
+1b. To run without docker (using npm):
 ```
-git pull base master
+npm run build
+npm run start:prod
 ```
+
+2. Navigate to [localhost:3000](http://localhost:3000)
