@@ -1,15 +1,11 @@
 import React from 'react'
 import {List, ListItem} from 'material-ui/List'
 
-const App = () => (
+const App = ({primary, secondary}) => (
   <List>
     <ListItem
-      primaryText="Hi, friend."
-      secondaryText={
-        <p>
-          Look, we're working on some stuff here, okay...
-        </p>
-      }
+      primaryText={primary}
+      secondaryText={secondary}
     />
   </List>
 )
