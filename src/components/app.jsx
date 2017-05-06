@@ -1,12 +1,10 @@
 import React from 'react'
-import {List, ListItem} from 'material-ui/List'
+import { List } from 'material-ui/List'
+import PostsContainer from '../containers/posts.jsx'
 
-const App = ({primary, secondary}) => (
+const App = ({kind, data}) => (
   <List>
-    <ListItem
-      primaryText={primary}
-      secondaryText={secondary}
-    />
+    <PostsContainer />
   </List>
 )
 

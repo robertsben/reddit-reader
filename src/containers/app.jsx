@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import App from '../components/app.jsx'
 
 function mapStateToProps(state) {
-  return {...state.messages}
+  return state
 }
 
 const AppContainer = connect(mapStateToProps)(App)
