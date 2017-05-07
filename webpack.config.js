@@ -14,6 +14,7 @@ var config = {
   devServer: {
     inline: true,
     contentBase: BUILD_DIR,
+    historyApiFallback: true,
     port: 3333
   },
   module: {
