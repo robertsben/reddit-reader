@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import thunk from 'redux-thunk'
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
@@ -18,7 +19,14 @@ injectTapEventPlugin()
 ReactDOM.render(
   <Provider store={store}>
     <MuiThemeProvider>
-      <AppContainer />
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={AppContainer} />
+          <Route path="/:subreddit?" render={({ match }) => (
+            <h3>{match.params.subreddit}</h3>
+          )}/>
+        </Switch>
+      </BrowserRouter>
     </MuiThemeProvider>
   </Provider>
   , document.getElementById('app')
