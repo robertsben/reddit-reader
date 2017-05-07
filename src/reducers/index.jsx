@@ -8,9 +8,12 @@ const initialState = {
 }
 
 export default function reducer(state=initialState, action) {
+  console.log(action)
   switch(action.type) {
+    case types.LOAD_SUBREDDIT_REQUEST:
+      return {...state, loading: true}
     case types.LOAD_SUBREDDIT_SUCCESS:
-      return {...action.subredditData}
+      return {...state, data: action.payload.data, loading: false}
     default:
       return state
   }

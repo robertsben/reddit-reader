@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
+import { apiMiddleware } from 'redux-api-middleware'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import thunk from 'redux-thunk'
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -10,7 +11,7 @@ import reducer from './reducers/index.jsx'
 import AppContainer from './containers/app.jsx'
 import loadSubreddit from './actions/loadReddit'
 
-const store = createStore(reducer, applyMiddleware(thunk))
+const store = createStore(reducer, applyMiddleware(apiMiddleware, thunk))
 
 // store.dispatch(loadSubreddit('all'))
 
