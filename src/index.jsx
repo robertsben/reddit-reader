@@ -12,7 +12,7 @@ import loadSubreddit from './actions/loadReddit'
 
 const store = createStore(reducer, applyMiddleware(thunk))
 
-store.dispatch(loadSubreddit('all'))
+// store.dispatch(loadSubreddit('all'))
 
 // @see: http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin()
@@ -22,9 +22,10 @@ ReactDOM.render(
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={AppContainer} />
-          <Route path="/:subreddit?" render={({ match }) => (
-            <h3>{match.params.subreddit}</h3>
-          )}/>
+          <Route path="/:subreddit?"
+                 render={({ match }) => (
+                   <AppContainer loadSubreddit={store.dispatch(loadSubreddit(match.params.subreddit))}/>
+                 )}/>
         </Switch>
       </BrowserRouter>
     </MuiThemeProvider>
